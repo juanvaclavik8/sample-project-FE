@@ -1,0 +1,50 @@
+<style></style>
+
+<main class="main">
+  <div class="content">
+    <h1>SensX Frontend App</h1>
+    <br />
+    <label>Status:</label><br />
+    <div>
+      <span *ngIf="status === 'idle'">
+        <mat-icon>track_changes</mat-icon>
+        <i class="fa fa-check"></i>
+      </span>
+      <span *ngIf="status === 'online'">
+        <mat-icon>thumb_up</mat-icon>
+        <i class="fa fa-exclamation-triangle"></i>
+      </span>
+      <span *ngIf="status === 'finished'">
+        <mat-icon>sentiment_very_satisfied</mat-icon>
+        <i class="fa fa-times"></i>
+      </span>
+    </div>
+    <label>{{ status }}</label
+    ><br />
+    <br />
+    <br />
+    <label>User input:</label>
+    <form [formGroup]="userForm">
+      <input
+        formControlName="userInput"
+        type="text"
+        #userInput
+        name="userInput"
+      />
+      <button (click)="OnSubmitUserInput(userInput.value)">Submit</button>
+    </form>
+    <br />
+    <br />
+    <label>Output:</label>
+    <br />
+    <label>{{ notification }}</label>
+    <br />
+    <br />
+    <label>Runs count:</label>
+    <br />
+    <label>{{ runsCount }}</label>
+    <br />
+  </div>
+</main>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+.content{
+  border: 2px solid #072c9f;
+  margin: 25px 50px;
+  background-color: #f2a6ff;
+  padding: 25px;
+}
+
+h1 {
+    text-align:center;
+    color: #072c9f;
+}
